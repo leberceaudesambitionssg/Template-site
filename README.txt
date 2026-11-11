@@ -1,4 +1,4 @@
-LE BERCEAU DES AMBITIONS — SITE V8 (préproduction)
+LE BERCEAU DES AMBITIONS — SITE V1 (préproduction)
 - index.html + assets/ : conserver les deux ensemble.
 - Tout texte surligné entre crochets [à compléter] est une information à fournir
   par l'association (lieu, horaires, tarif, public, téléphone, RNA, hébergeur...).
