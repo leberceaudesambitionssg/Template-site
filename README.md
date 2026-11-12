@@ -10,9 +10,3 @@ Fichiers de mise en ligne : `404.html`, `robots.txt`, `sitemap.xml` (à placer �
 - Ne pas mentionner de réduction fiscale pour les dons sans vérification.
 - Visuel du pôle associatif : `assets/pole-associatif.png`.
 - Le domaine `le-berceau-des-ambitions.fr` (balises canonical, Open Graph, JSON-LD, robots.txt, sitemap.xml) est à confirmer avant publication.
-
-## Design
-- Identité tirée du logo : bleu (soutien scolaire), vert (administratif et social), orange (Parenthèse des mamans, le soleil du logo).
-- Titres en Poppins, texte en Lora. Polices hébergées dans `assets/fonts/` (licences dans `LICENCES.txt`), sans service externe.
-- Les couleurs et polices sont des variables en tête du CSS (`:root`) de `index.html`.
-- Les animations de l'accueil sont désactivées pour les visiteurs qui demandent moins de mouvement.
