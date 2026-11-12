@@ -1,0 +1,7 @@
+Polices hébergées avec le site (aucun appel à un service externe, donc aucune donnée de visiteur transmise).
+
+- Poppins (Medium, Bold) : SIL Open Font License 1.1, Indian Type Foundry.
+- Lora (variable, romain et italique) : SIL Open Font License 1.1, Cyreal.
+
+Les fichiers .woff sont des sous-ensembles latins (français inclus) des polices d'origine.
+Texte de la licence : https://openfontlicense.org
