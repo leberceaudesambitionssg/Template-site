@@ -520,6 +520,24 @@
     #methode-spirale + #social{background:var(--cream)}
     @media (max-width:900px){.stats,.steps.four{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}}
     @media (max-width:640px){.stats,.steps.four{grid-template-columns:1fr}.infos{grid-template-columns:1fr}.infos dt{margin-top:6px}}
+    /* ---- v9 : parcours, Parenthèse des mamans, image ---- */
+    .visual-card picture{display:contents}
+    .nav-links{gap:22px}
+    .paths-section{padding-top:24px}
+    .paths{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .path-card{position:relative;display:flex;flex-direction:column;gap:6px;padding:28px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 30px rgba(18,52,91,.045);transition:.2s ease}
+    .path-card:hover{transform:translateY(-3px);border-color:var(--teal)}
+    .path-card h3{color:var(--navy);font-size:1.3rem;margin:14px 0 4px}
+    .path-card p{color:var(--muted);margin:0}
+    .path-icon{width:55px;height:55px;display:grid;place-items:center;border-radius:17px;background:var(--mint);font-size:1.55rem}
+    .path-link{margin-top:auto;padding-top:16px;font-weight:750;color:var(--teal)}
+    .path-new{border-color:#e5cf9d;background:#fffaf0}
+    .path-tag{position:absolute;top:18px;right:18px;background:var(--gold-text);color:#fff;border-radius:99px;padding:3px 11px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    #parenthese-des-mamans{background:var(--mint)}
+    #parenthese-des-mamans .panel{box-shadow:0 8px 30px rgba(18,52,91,.06)}
+    .cta-inline{margin-top:30px}
+    @media (max-width:1180px){.nav>.btn{display:none}}
+    @media (max-width:900px){.paths{grid-template-columns:1fr}}
   </style>
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <noscript><style>dialog.legal-dialog{display:block;position:static;margin:40px auto}</style></noscript>
@@ -551,6 +569,7 @@
         <a href="#association">L'association</a>
         <a href="#soutien-scolaire">Soutien scolaire</a>
         <a href="#social">Démarches &amp; social</a>
+        <a href="#parenthese-des-mamans">Parenthèse des mamans</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
@@ -574,12 +593,42 @@
         </div>
         <div class="hero-visual">
           <div class="visual-card">
-            <img class="visual-symbol" src="assets/pole-associatif.png" alt="Des jeunes, des familles et des accompagnants réunis autour du soutien scolaire, de l’inclusion numérique, de la parentalité, de la prévention du décrochage, de la citoyenneté et de l’insertion des jeunes" width="310" height="207" decoding="async">
+            <picture><source srcset="assets/pole-associatif.webp" type="image/webp"><img class="visual-symbol" src="assets/pole-associatif.png" alt="Des jeunes, des familles et des accompagnants réunis autour du soutien scolaire, de l’inclusion numérique, de la parentalité, de la prévention du décrochage, de la citoyenneté et de l’insertion des jeunes" width="640" height="640" decoding="async"></picture>
             <p class="visual-title">Apprendre aujourd'hui, construire demain.</p>
             <p>Deux pôles complémentaires pour favoriser l'autonomie, l'inclusion et la réussite de chacun.</p>
             <div class="visual-tags"><span>Éducation</span><span>Solidarité</span><span>Autonomie</span></div>
           </div>
           <div class="floating-note"><strong>Deux pôles complémentaires</strong><small>Soutien scolaire &amp; accompagnement social</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paths-section" id="parcours" aria-labelledby="parcours-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Par où commencer ?</span>
+          <h2 id="parcours-title">Choisissez le parcours qui vous correspond.</h2>
+        </div>
+        <div class="paths">
+          <a class="path-card" href="#soutien-scolaire">
+            <span class="path-icon" aria-hidden="true">🎓</span>
+            <h3>Je suis un jeune ou un parent</h3>
+            <p>Découvrir le soutien scolaire, les matières, les modalités d'accueil et les horaires.</p>
+            <span class="path-link">Voir le soutien scolaire <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="path-card" href="#social">
+            <span class="path-icon" aria-hidden="true">🤝</span>
+            <h3>Je souhaite être accompagné(e)</h3>
+            <p>Découvrir l'accompagnement administratif, social et numérique et prendre rendez-vous.</p>
+            <span class="path-link">Voir les démarches &amp; le social <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="path-card path-new" href="#parenthese-des-mamans">
+            <span class="path-tag">Nouveau</span>
+            <span class="path-icon" aria-hidden="true">🌸</span>
+            <h3>Je suis une maman et j'ai besoin d'un temps pour moi</h3>
+            <p>Découvrir la Parenthèse des mamans, un moment pour souffler et se faire du bien.</p>
+            <span class="path-link">Découvrir la Parenthèse <span aria-hidden="true">→</span></span>
+          </a>
         </div>
       </div>
     </section>
@@ -752,6 +801,41 @@
       </div>
     </section>
 
+    <section class="section" id="parenthese-des-mamans">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nouvelle activité</span>
+          <h2>La Parenthèse des mamans</h2>
+          <p>Un temps pour souffler, se poser et se faire du bien, pensé pour les mamans qui traversent une période difficile.</p>
+        </div>
+        <div class="two-col">
+          <div class="panel">
+            <h3>L'esprit de la Parenthèse</h3>
+            <p>Être maman, c'est souvent donner beaucoup, parfois jusqu'à s'oublier. La Parenthèse des mamans offre, dans les locaux de l'association, un moment de bienveillance où chacune peut se poser et se faire du bien.</p>
+            <ul class="service-list">
+              <li><span class="check" aria-hidden="true">✓</span><span>Un temps rien que pour vous, dans un cadre chaleureux</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>Un accueil sans jugement, dans le respect de chacune</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>La confidentialité de ce que vous partagez</span></li>
+            </ul>
+            <p class="small"><span class="legal-placeholder">[Déroulé des séances à préciser : ateliers, échanges, détente…]</span></p>
+          </div>
+          <div class="panel">
+            <h3>Informations pratiques</h3>
+            <dl class="infos">
+              <dt>Public</dt><dd>Mamans qui traversent une période difficile</dd>
+              <dt>Début</dt><dd>À partir du samedi 7 novembre, après 15 h</dd>
+              <dt>Rythme</dt><dd><span class="legal-placeholder">[hebdomadaire ? à confirmer]</span></dd>
+              <dt>Lieu</dt><dd>Dans les locaux de l'association <span class="legal-placeholder">[adresse à compléter]</span></dd>
+              <dt>Inscription</dt><dd><span class="legal-placeholder">[sur inscription ou accueil libre — à préciser]</span></dd>
+              <dt>Tarif</dt><dd><span class="legal-placeholder">[à confirmer]</span></dd>
+            </dl>
+            <div class="notice"><strong>Bon à savoir :</strong> la Parenthèse est un temps de bienveillance et de soutien ; elle ne remplace ni un suivi médical ni un accompagnement psychologique. En cas d'urgence ou de grande détresse, contactez le 15 ou le 3114 (numéro national de prévention du suicide, 24 h/24).</div>
+          </div>
+        </div>
+        <p class="cta-inline"><a class="btn btn-primary" href="#contact">Nous contacter pour en savoir plus <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
     <section class="section section-white" id="faq">
       <div class="container">
         <div class="section-head">
@@ -762,9 +846,10 @@
           <details><summary>À partir de quel niveau accueillez-vous les élèves ?</summary><p>Notre soutien scolaire s'adresse aux collégiens et aux lycéens. <span class="legal-placeholder">[Confirmer les niveaux exacts.]</span></p></details>
           <details><summary>Faut-il apporter ses cours ?</summary><p>Oui, cahiers, leçons et exercices en cours permettent de travailler au plus près du programme de l'élève. <span class="legal-placeholder">[À confirmer.]</span></p></details>
           <details><summary>Que faire en cas d'absence ?</summary><p><span class="legal-placeholder">[Règle à définir : prévenir par e-mail / téléphone, rattrapage éventuel.]</span></p></details>
+          <details><summary>Qu'est-ce que la Parenthèse des mamans ?</summary><p>Une nouvelle activité de l'association : un temps de bienveillance pour des mamans qui traversent une période difficile, à partir du samedi 7 novembre, après 15 h, dans nos locaux. <span class="legal-placeholder">[Modalités d'inscription à préciser.]</span></p></details>
           <details><summary>Le soutien est-il gratuit ?</summary><p>Oui. Pour le moment, le soutien scolaire et l'accompagnement administratif et social sont gratuits. Cette information pourra évoluer et sera alors mise à jour sur ce site.</p></details>
           <details><summary>Pour une démarche administrative, que dois-je apporter ?</summary><p>Vos courriers et les documents liés à la démarche. N'envoyez jamais de pièces d'identité ni de numéro de sécurité sociale par e-mail : apportez-les au rendez-vous.</p></details>
-          <details><summary>Mes informations sont-elles confidentielles ?</summary><p>Oui. Elles ne sont utilisées que pour répondre à votre demande, par les membres habilités de l'association. Voir la <a href="#legalDialog" data-open-privacy>politique de confidentialité</a>.</p></details>
+          <details><summary>Mes informations sont-elles confidentielles ?</summary><p>Oui. Elles ne sont utilisées que pour répondre à votre demande, par les membres habilités de l'association. Voir la <a href="#privacyDialog" data-open-privacy>politique de confidentialité</a>.</p></details>
         </div>
       </div>
     </section>
@@ -820,6 +905,7 @@
                   <option>Soutien scolaire – collège</option>
                   <option>Soutien scolaire – lycée</option>
                   <option>Accompagnement administratif et social</option>
+                  <option>Parenthèse des mamans</option>
                   <option>Adhésion, don, partenariat ou bénévolat</option>
                   <option>Autre demande</option>
                 </select>
@@ -835,13 +921,13 @@
 
               <label class="consent">
                 <input type="checkbox" name="consent" id="consent" required aria-required="true">
-                <span>J'accepte que mes données soient traitées pour répondre à ma demande, conformément à la <a href="#legalDialog" data-open-privacy>politique de confidentialité</a>. <span class="req" aria-hidden="true">*</span></span>
+                <span>J'accepte que mes données soient traitées pour répondre à ma demande, conformément à la <a href="#privacyDialog" data-open-privacy>politique de confidentialité</a>. <span class="req" aria-hidden="true">*</span></span>
               </label>
 
               <p class="form-hint" id="form-hint">
                 Les champs marqués <span class="req" aria-hidden="true">*</span> sont obligatoires.
-                <strong>N’indiquez ni pièce d’identité ni numéro de sécurité sociale.</strong> Le formulaire prépare un courriel dans votre logiciel de messagerie ; vous devez ensuite l’envoyer vous-même. La durée de conservation des messages reçus doit être définie par l’association.
-                Vous disposez d'un droit d'accès, de rectification et d'effacement (voir <a href="#legalDialog" data-open-privacy>politique de confidentialité</a>).
+                <strong>N’indiquez ni pièce d’identité, ni numéro de sécurité sociale, ni information sur votre santé.</strong> Le formulaire prépare un courriel dans votre logiciel de messagerie ; vous devez ensuite l’envoyer vous-même. La durée de conservation des messages reçus doit être définie par l’association.
+                Vous disposez d'un droit d'accès, de rectification et d'effacement (voir <a href="#privacyDialog" data-open-privacy>politique de confidentialité</a>).
               </p>
 <div>
                 <button class="btn btn-primary" type="submit" enterkeyhint="send">
@@ -882,10 +968,10 @@
     </div>
   </footer>
 
-  <!-- Dialog mentions légales (RGPD intégré) -->
+  <!-- Fenêtre : mentions légales -->
   <dialog id="legalDialog" class="legal-dialog" aria-labelledby="legalTitle">
     <div class="legal-content">
-      <h2 id="legalTitle">Mentions légales et confidentialité — projet à compléter</h2>
+      <h2 id="legalTitle">Mentions légales — projet à compléter</h2>
       <p class="legal-placeholder"><strong>Document de préproduction : les informations entre crochets doivent être remplacées et l’ensemble validé avant publication.</strong></p>
 
       <h3>Éditeur du site</h3>
@@ -902,14 +988,42 @@
       <h3>Propriété intellectuelle</h3>
       <p>L'ensemble des contenus (textes, images, logos) présents sur ce site est la propriété exclusive de l'association ou de ses partenaires. Toute reproduction sans autorisation écrite préalable est interdite.</p>
 
-      <h3>Données personnelles (RGPD)</h3>
-      <p><strong>Responsable du traitement :</strong> Le Berceau des Ambitions.</p>
-      <p><strong>Finalité :</strong> traitement des demandes de contact (soutien scolaire, accompagnement social, partenariat, bénévolat).</p>
+      <h3>Cookies</h3>
+      <p>Ce site n'utilise aucun cookie de mesure d'audience ni de suivi publicitaire.</p>
+
+      <h3>Données personnelles</h3>
+      <p>Le traitement de vos données est décrit dans la <a href="#privacyDialog" data-open-privacy>politique de confidentialité</a>.</p>
+    </div>
+    <form method="dialog" class="legal-actions">
+      <button class="btn btn-primary" type="submit">Fermer</button>
+    </form>
+  </dialog>
+
+  <!-- Fenêtre : politique de confidentialité (RGPD) -->
+  <dialog id="privacyDialog" class="legal-dialog" aria-labelledby="privacyTitle">
+    <div class="legal-content">
+      <h2 id="privacyTitle">Politique de confidentialité — projet à compléter</h2>
+      <p class="legal-placeholder"><strong>Document de préproduction : les informations entre crochets doivent être remplacées et l’ensemble validé avant publication.</strong></p>
+
+      <h3>Responsable du traitement</h3>
+      <p>Le Berceau des Ambitions, association régie par la loi du 1<sup>er</sup> juillet 1901 (voir les <a href="#legalDialog" data-open-legal>mentions légales</a>).</p>
+
+      <h3>Finalité et base légale</h3>
+      <p><strong>Finalité :</strong> traitement des demandes de contact (soutien scolaire, accompagnement administratif et social, Parenthèse des mamans, partenariat, bénévolat).</p>
       <p><strong>Base légale :</strong> consentement de la personne concernée (article 6.1.a du RGPD).</p>
-      <p><strong>Données collectées :</strong> nom, prénom, adresse e-mail, sujet de la demande, message.</p>
-      <p><strong>Destinataires :</strong> les membres habilités de l'association. Aucune donnée n'est cédée ni vendue à des tiers.</p>
-      <p><strong>Durée de conservation :</strong> à définir et à documenter par l’association selon la finalité du traitement et ses obligations.</p>
-      <p><strong>Transmission :</strong> le formulaire prépare un courriel dans le logiciel de messagerie du visiteur. Le visiteur reste responsable de l’envoi effectif. Les données sont alors transmises par le service de messagerie qu’il utilise ; les modalités de traitement doivent être précisées par l’association.</p>
+
+      <h3>Données collectées</h3>
+      <p>Nom, prénom, adresse e-mail, sujet de la demande et message. Merci de ne communiquer ni pièce d’identité, ni numéro de sécurité sociale, ni information sur votre santé.</p>
+
+      <h3>Destinataires</h3>
+      <p>Les membres habilités de l'association. Aucune donnée n'est cédée ni vendue à des tiers.</p>
+
+      <h3>Durée de conservation</h3>
+      <p class="legal-placeholder">[À définir et à documenter par l’association selon la finalité du traitement et ses obligations.]</p>
+
+      <h3>Transmission et sécurité</h3>
+      <p>Le formulaire prépare un courriel dans le logiciel de messagerie du visiteur. Le visiteur reste responsable de l’envoi effectif. Les données sont alors transmises par le service de messagerie qu’il utilise.</p>
+      <p class="legal-placeholder">[Mesures de sécurisation des messages reçus et modalités de traitement à préciser par l’association.]</p>
 
       <h3>Vos droits</h3>
       <p>Conformément aux articles 15 à 22 du RGPD, vous disposez des droits suivants :</p>
@@ -940,7 +1054,9 @@
       const menuToggle = document.getElementById('menuToggle');
       const navLinks = document.getElementById('navLinks');
       const legalDialog = document.getElementById('legalDialog');
-      const legalButtons = document.querySelectorAll('[data-open-legal], [data-open-privacy]');
+      const privacyDialog = document.getElementById('privacyDialog');
+      const legalButtons = document.querySelectorAll('[data-open-legal]');
+      const privacyButtons = document.querySelectorAll('[data-open-privacy]');
       const contactForm = document.getElementById('contactForm');
       const formStatus = document.getElementById('formStatus');
 
@@ -995,20 +1111,30 @@
         sections.forEach(s => obs.observe(s));
       }
 
-      // ---------- Dialog mentions légales ----------
-      function openLegal() {
-        if (!legalDialog) return;
-        if (typeof legalDialog.showModal === 'function') {
-          legalDialog.showModal();
+      // ---------- Fenêtres mentions légales / confidentialité ----------
+      function openDialog(dialog) {
+        if (!dialog) return;
+        [legalDialog, privacyDialog].forEach(d => {
+          if (d && d !== dialog && d.open) d.close();
+        });
+        if (typeof dialog.showModal === 'function') {
+          if (!dialog.open) dialog.showModal();
         } else {
-          legalDialog.setAttribute('open', '');
+          dialog.setAttribute('open', '');
         }
       }
-      legalButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          openLegal();
-        });
+      legalButtons.forEach(btn => btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openDialog(legalDialog);
+      }));
+      privacyButtons.forEach(btn => btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openDialog(privacyDialog);
+      }));
+      // Clic sur le fond : ferme la fenêtre
+      [legalDialog, privacyDialog].forEach(d => {
+        if (!d) return;
+        d.addEventListener('click', (e) => { if (e.target === d) d.close(); });
       });
 
       // ---------- Formulaire de contact ----------
